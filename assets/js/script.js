@@ -75,6 +75,12 @@ function handleFormColors(elementChecked) {
 	}
 }
 
+function renderFormText() {
+	var eightAMRender = JSON.parse(localStorage.getItem('eightAM'));
+	console.log('eightAMRender :>> ', eightAMRender);
+	$('#eightam-input-area').val(eightAMRender);
+}
+
 function renderFormColors() {
 	for (let i = 0; i < timeSlots.length; i++) {
 		handleFormColors(timeSlots[i]);
@@ -85,10 +91,14 @@ renderFormColors();
 function saveFormText(currentElement) {
 	var text = currentElement.inputTarget.val();
 	console.log('text :>> ', text);
+	return text;
 }
 
 $('#eightam-button').click(function () {
-	saveFormText(eightAMFormEl);
+	var eightAMValue = saveFormText(eightAMFormEl);
+	if (eightAMValue) {
+		localStorage.setItem('eightAM', JSON.stringify(eightAMValue));
+	}
 });
 $('#nineam-button').click(function () {
 	saveFormText(nineAMFormEL);
@@ -117,3 +127,5 @@ $('#fourpm-button').click(function () {
 $('#fivepm-button').click(function () {
 	saveFormText(fivePMFormEL);
 });
+
+renderFormText();
