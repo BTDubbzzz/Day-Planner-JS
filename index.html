@@ -1,274 +1,195 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
-      crossorigin="anonymous"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="./assets/css/style.css" />
-    <title>Work Day Scheduler</title>
-  </head>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<link
+			rel="stylesheet"
+			href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+			integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+			crossorigin="anonymous"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="./assets/css/style.css" />
+		<title>Work Day Scheduler</title>
+	</head>
 
-  <body>
-    <header class="jumbotron">
-      <h1 class="display-3">Work Day Scheduler</h1>
-      <p class="lead">A simple calendar app for scheduling your work day</p>
-      <p id="currentDay" class="lead"></p>
-    </header>
-    <div class="container">
-      <div class="input-group mb-3" id="8am-form-slot">
-        <div class="input-group-prepend">
-          <span class="input-group-text">8 AM </span>
-        </div>
-        <input
-          type="text"
-          class="form-control"
-          aria-describedby="button-addon2"
-        />
-        <div class="input-group-append">
-          <button
-            class="btn btn-outline-secondary"
-            type="button"
-            id="button-addon2"
-          >
-            <img
-              src="./assets/images/download.png"
-              alt="test gif"
-              height="21rem"
-            />
-          </button>
-        </div>
-      </div>
-      <div class="input-group mb-3" id="9am-form-slot">
-        <div class="input-group-prepend">
-          <span class="input-group-text">9 AM </span>
-        </div>
-        <input
-          type="text"
-          class="form-control"
-          aria-describedby="button-addon2"
-        />
-        <div class="input-group-append">
-          <button
-            class="btn btn-outline-secondary"
-            type="button"
-            id="button-addon2"
-          >
-            <img
-              src="./assets/images/download.png"
-              alt="test gif"
-              height="21rem"
-            />
-          </button>
-        </div>
-      </div>
-      <div class="input-group mb-3" id="10am-form-slot">
-        <div class="input-group-prepend">
-          <span class="input-group-text">10 AM</span>
-        </div>
-        <input
-          type="text"
-          class="form-control"
-          aria-describedby="button-addon2"
-        />
-        <div class="input-group-append">
-          <button
-            class="btn btn-outline-secondary"
-            type="button"
-            id="button-addon2"
-          >
-            <img
-              src="./assets/images/download.png"
-              alt="test gif"
-              height="21rem"
-            />
-          </button>
-        </div>
-      </div>
-      <div class="input-group mb-3" id="11am-form-slot">
-        <div class="input-group-prepend">
-          <span class="input-group-text">11 AM</span>
-        </div>
-        <input
-          type="text"
-          class="form-control"
-          aria-describedby="button-addon2"
-        />
-        <div class="input-group-append">
-          <button
-            class="btn btn-outline-secondary"
-            type="button"
-            id="button-addon2"
-          >
-            <img
-              src="./assets/images/download.png"
-              alt="test gif"
-              height="21rem"
-            />
-          </button>
-        </div>
-      </div>
-      <div class="input-group mb-3" id="12pm-form-slot">
-        <div class="input-group-prepend">
-          <span class="input-group-text">12 PM</span>
-        </div>
-        <input
-          type="text"
-          class="form-control"
-          aria-describedby="button-addon2"
-        />
-        <div class="input-group-append">
-          <button
-            class="btn btn-outline-secondary"
-            type="button"
-            id="button-addon2"
-          >
-            <img
-              src="./assets/images/download.png"
-              alt="test gif"
-              height="21rem"
-            />
-          </button>
-        </div>
-      </div>
-      <div class="input-group mb-3" id="1pm-form-slot">
-        <div class="input-group-prepend">
-          <span class="input-group-text">1 PM </span>
-        </div>
-        <input
-          type="text"
-          class="form-control"
-          aria-describedby="button-addon2"
-        />
-        <div class="input-group-append">
-          <button
-            class="btn btn-outline-secondary"
-            type="button"
-            id="button-addon2"
-          >
-            <img
-              src="./assets/images/download.png"
-              alt="test gif"
-              height="21rem"
-            />
-          </button>
-        </div>
-      </div>
-      <div class="input-group mb-3" id="2pm-form-slot">
-        <div class="input-group-prepend">
-          <span class="input-group-text">2 PM </span>
-        </div>
-        <input
-          type="text"
-          class="form-control"
-          aria-describedby="button-addon2"
-        />
-        <div class="input-group-append">
-          <button
-            class="btn btn-outline-secondary"
-            type="button"
-            id="button-addon2"
-          >
-            <img
-              src="./assets/images/download.png"
-              alt="test gif"
-              height="21rem"
-            />
-          </button>
-        </div>
-      </div>
-      <div class="input-group mb-3" id="3pm-form-slot">
-        <div class="input-group-prepend">
-          <span class="input-group-text">3 PM </span>
-        </div>
-        <input
-          type="text"
-          class="form-control"
-          aria-describedby="button-addon2"
-        />
-        <div class="input-group-append">
-          <button
-            class="btn btn-outline-secondary"
-            type="button"
-            id="button-addon2"
-          >
-            <img
-              src="./assets/images/download.png"
-              alt="test gif"
-              height="21rem"
-            />
-          </button>
-        </div>
-      </div>
-      <div class="input-group mb-3" id="4pm-form-slot">
-        <div class="input-group-prepend">
-          <span class="input-group-text">4 PM </span>
-        </div>
-        <input
-          type="text"
-          class="form-control"
-          aria-describedby="button-addon2"
-        />
-        <div class="input-group-append">
-          <button
-            class="btn btn-outline-secondary"
-            type="button"
-            id="button-addon2"
-          >
-            <img
-              src="./assets/images/download.png"
-              alt="test gif"
-              height="21rem"
-            />
-          </button>
-        </div>
-      </div>
-      <div class="input-group mb-3" id="5pm-form-slot">
-        <div class="input-group-prepend">
-          <span class="input-group-text">5 PM </span>
-        </div>
-        <input
-          type="text"
-          class="form-control"
-          aria-describedby="button-addon2"
-        />
-        <div class="input-group-append">
-          <button
-            class="btn btn-outline-secondary"
-            type="button"
-            id="button-addon2"
-          >
-            <img
-              src="./assets/images/download.png"
-              alt="test gif"
-              height="21rem"
-            />
-          </button>
-        </div>
-      </div>
-    </div>
+	<body class="bg-info">
+		<header class="jumbotron bg-dark text-light">
+			<h1 class="display-3">Work Day Scheduler</h1>
+			<p class="lead">A simple calendar app for scheduling your work day</p>
+			<p id="currentDay" class="lead"></p>
+			<p id="currentTime" class="lead"></p>
+		</header>
+		<div class="container bg-dark p-3">
+			<div class="input-group mb-3" id="eightam-form-slot">
+				<div class="input-group-prepend">
+					<span class="input-group-text re-color">8 AM </span>
+				</div>
+				<input
+					type="text"
+					class="form-control re-color"
+					aria-describedby="button-addon2"
+				/>
+				<div class="input-group-append">
+					<button class="btn btn-outline-secondary" type="button" id="button-addon2">
+						<img src="./assets/images/download.png" alt="test gif" height="21rem" />
+					</button>
+				</div>
+			</div>
+			<div class="input-group mb-3" id="nineam-form-slot">
+				<div class="input-group-prepend">
+					<span class="input-group-text re-color">9 AM </span>
+				</div>
+				<input
+					type="text"
+					class="form-control re-color"
+					aria-describedby="button-addon2"
+				/>
+				<div class="input-group-append">
+					<button class="btn btn-outline-secondary" type="button" id="button-addon2">
+						<img src="./assets/images/download.png" alt="test gif" height="21rem" />
+					</button>
+				</div>
+			</div>
+			<div class="input-group mb-3" id="tenam-form-slot">
+				<div class="input-group-prepend">
+					<span class="input-group-text re-color">10 AM </span>
+				</div>
+				<input
+					type="text"
+					class="form-control re-color"
+					aria-describedby="button-addon2"
+				/>
+				<div class="input-group-append">
+					<button class="btn btn-outline-secondary" type="button" id="button-addon2">
+						<img src="./assets/images/download.png" alt="test gif" height="21rem" />
+					</button>
+				</div>
+			</div>
+			<div class="input-group mb-3" id="elevenam-form-slot">
+				<div class="input-group-prepend">
+					<span class="input-group-text re-color">11 AM </span>
+				</div>
+				<input
+					type="text"
+					class="form-control re-color"
+					aria-describedby="button-addon2"
+				/>
+				<div class="input-group-append">
+					<button class="btn btn-outline-secondary" type="button" id="button-addon2">
+						<img src="./assets/images/download.png" alt="test gif" height="21rem" />
+					</button>
+				</div>
+			</div>
+			<div class="input-group mb-3" id="twelvepm-form-slot">
+				<div class="input-group-prepend">
+					<span class="input-group-text re-color">12 PM </span>
+				</div>
+				<input
+					type="text"
+					class="form-control re-color"
+					aria-describedby="button-addon2"
+				/>
+				<div class="input-group-append">
+					<button class="btn btn-outline-secondary" type="button" id="button-addon2">
+						<img src="./assets/images/download.png" alt="test gif" height="21rem" />
+					</button>
+				</div>
+			</div>
+			<div class="input-group mb-3" id="onepm-form-slot">
+				<div class="input-group-prepend">
+					<span class="input-group-text re-color">1 PM </span>
+				</div>
+				<input
+					type="text"
+					class="form-control re-color"
+					aria-describedby="button-addon2"
+				/>
+				<div class="input-group-append">
+					<button class="btn btn-outline-secondary" type="button" id="button-addon2">
+						<img src="./assets/images/download.png" alt="test gif" height="21rem" />
+					</button>
+				</div>
+			</div>
+			<div class="input-group mb-3" id="twopm-form-slot">
+				<div class="input-group-prepend">
+					<span class="input-group-text re-color">2 PM </span>
+				</div>
+				<input
+					type="text"
+					class="form-control re-color"
+					aria-describedby="button-addon2"
+				/>
+				<div class="input-group-append">
+					<button class="btn btn-outline-secondary" type="button" id="button-addon2">
+						<img src="./assets/images/download.png" alt="test gif" height="21rem" />
+					</button>
+				</div>
+			</div>
+			<div class="input-group mb-3" id="threepm-form-slot">
+				<div class="input-group-prepend">
+					<span class="input-group-text re-color">3 PM </span>
+				</div>
+				<input
+					type="text"
+					class="form-control re-color"
+					aria-describedby="button-addon2"
+				/>
+				<div class="input-group-append">
+					<button class="btn btn-outline-secondary" type="button" id="button-addon2">
+						<img src="./assets/images/download.png" alt="test gif" height="21rem" />
+					</button>
+				</div>
+			</div>
+			<div class="input-group mb-3" id="fourpm-form-slot">
+				<div class="input-group-prepend">
+					<span class="input-group-text re-color">4 PM </span>
+				</div>
+				<input
+					type="text"
+					class="form-control re-color"
+					aria-describedby="button-addon2"
+				/>
+				<div class="input-group-append">
+					<button class="btn btn-outline-secondary" type="button" id="button-addon2">
+						<img src="./assets/images/download.png" alt="test gif" height="21rem" />
+					</button>
+				</div>
+			</div>
+			<div class="input-group mb-3" id="fivepm-form-slot">
+				<div class="input-group-prepend">
+					<span class="input-group-text re-color">5 PM </span>
+				</div>
+				<input
+					type="text"
+					class="form-control re-color"
+					aria-describedby="button-addon2"
+				/>
+				<div class="input-group-append">
+					<button class="btn btn-outline-secondary" type="button" id="button-addon2">
+						<img src="./assets/images/download.png" alt="test gif" height="21rem" />
+					</button>
+				</div>
+			</div>
+		</div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://unpkg.com/dayjs@1.10.4/dayjs.min.js"></script>
-    <script src="https://unpkg.com/dayjs@1.10.4/plugin/advancedFormat.js"></script>
-    <script src="https://unpkg.com/dayjs@1.10.4/plugin/weekOfYear.js"></script>
-    <script>
-      dayjs.extend(window.dayjs_plugin_advancedFormat);
-      dayjs.extend(window.dayjs_plugin_weekOfYear);
-    </script>
-    <script src="./assets/js/script.js"></script>
-  </body>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="https://unpkg.com/dayjs@1.10.4/dayjs.min.js"></script>
+		<script src="https://unpkg.com/dayjs@1.10.4/plugin/advancedFormat.js"></script>
+		<script src="https://unpkg.com/dayjs@1.10.4/plugin/weekOfYear.js"></script>
+		<script>
+			dayjs.extend(window.dayjs_plugin_advancedFormat);
+			dayjs.extend(window.dayjs_plugin_weekOfYear);
+		</script>
+		<script src="./assets/js/script.js"></script>
+	</body>
 </html>
