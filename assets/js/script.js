@@ -77,8 +77,25 @@ function handleFormColors(elementChecked) {
 
 function renderFormText() {
 	var eightAMRender = JSON.parse(localStorage.getItem('eightAM'));
-	console.log('eightAMRender :>> ', eightAMRender);
 	$('#eightam-input-area').val(eightAMRender);
+	var nineAMRender = JSON.parse(localStorage.getItem('nineAM'));
+	$('#nineam-input-area').val(nineAMRender);
+	var tenAMRender = JSON.parse(localStorage.getItem('tenAM'));
+	$('#tenam-input-area').val(tenAMRender);
+	var elevenAMRender = JSON.parse(localStorage.getItem('elevenAM'));
+	$('#elevenam-input-area').val(elevenAMRender);
+	var twelvePMRender = JSON.parse(localStorage.getItem('twelvePM'));
+	$('#twelvepm-input-area').val(twelvePMRender);
+	var onePMRender = JSON.parse(localStorage.getItem('onePM'));
+	$('#onepm-input-area').val(onePMRender);
+	var twoPMRender = JSON.parse(localStorage.getItem('twoPM'));
+	$('#twopm-input-area').val(twoPMRender);
+	var threePMRender = JSON.parse(localStorage.getItem('threePM'));
+	$('#threepm-input-area').val(threePMRender);
+	var fourPMRender = JSON.parse(localStorage.getItem('fourPM'));
+	$('#fourpm-input-area').val(fourPMRender);
+	var fivePMRender = JSON.parse(localStorage.getItem('fivePM'));
+	$('#fivepm-input-area').val(fivePMRender);
 }
 
 function renderFormColors() {
@@ -101,31 +118,61 @@ $('#eightam-button').click(function () {
 	}
 });
 $('#nineam-button').click(function () {
-	saveFormText(nineAMFormEL);
+	var nineAMValue = saveFormText(nineAMFormEL);
+	if (nineAMValue) {
+		localStorage.setItem('nineAM', JSON.stringify(nineAMValue));
+	}
 });
 $('#tenam-button').click(function () {
-	saveFormText(tenAMFormEL);
+	var tenAMValue = saveFormText(tenAMFormEL);
+	if (tenAMValue) {
+		localStorage.setItem('tenAM', JSON.stringify(tenAMValue));
+	}
 });
 $('#elevenam-button').click(function () {
-	saveFormText(elevenAMFormEL);
+	var elevenAMValue = saveFormText(elevenAMFormEL);
+	if (elevenAMValue) {
+		localStorage.setItem('elevenAM', JSON.stringify(elevenAMValue));
+	}
 });
 $('#twelvepm-button').click(function () {
-	saveFormText(twelvePMFormEL);
+	var twelvePMValue = saveFormText(twelvePMFormEL);
+	if (twelvePMValue) {
+		localStorage.setItem('twelvePM', JSON.stringify(twelvePMValue));
+	}
 });
 $('#onepm-button').click(function () {
-	saveFormText(onePMFormEL);
+	var onePMValue = saveFormText(onePMFormEL);
+	if (onePMValue) {
+		localStorage.setItem('onePM', JSON.stringify(onePMValue));
+	}
 });
 $('#twopm-button').click(function () {
-	saveFormText(twoPMFormEL);
+	var twoPMValue = saveFormText(twoPMFormEL);
+	if (twoPMValue) {
+		localStorage.setItem('twoPM', JSON.stringify(twoPMValue));
+	}
 });
 $('#threepm-button').click(function () {
-	saveFormText(threePMFormEL);
+	var threePMValue = saveFormText(threePMFormEL);
+	if (threePMValue) {
+		localStorage.setItem('threePM', JSON.stringify(threePMValue));
+	}
 });
 $('#fourpm-button').click(function () {
-	saveFormText(fourPMFormEL);
+	var fourPMValue = saveFormText(fourPMFormEL);
+	if (fourPMValue) {
+		localStorage.setItem('fourPM', JSON.stringify(fourPMValue));
+	}
 });
 $('#fivepm-button').click(function () {
-	saveFormText(fivePMFormEL);
+	var fivePMValue = saveFormText(fivePMFormEL);
+	if (fivePMValue) {
+		localStorage.setItem('fivePM', JSON.stringify(fivePMValue));
+	}
 });
 
 renderFormText();
+$('#reset-button').click(function () {
+	localStorage.clear();
+});
